@@ -1,0 +1,89 @@
+.about {
+  height: 320px;
+  width: 100%;
+}
+.about .aboutblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -80px;
+  position: relative;
+  z-index: 3;
+}
+.about .aboutblock__content {
+  padding: 50px 45px;
+}
+.about .aboutblock__content:nth-child(1) {
+  -webkit-flex-basis: 66.66667%;
+      -ms-flex-preferred-size: 66.66667%;
+          flex-basis: 66.66667%;
+  background-color: $white;
+}
+.about .aboutblock__content:nth-child(2) {
+  -webkit-flex-basis: 33.33334%;
+      -ms-flex-preferred-size: 33.33334%;
+          flex-basis: 33.33334%;
+  background-color: #4d4d4d;
+}
+div.aboutblock__content:nth-child(1) > div:nth-child(1) {
+  font-family: Medium;
+  font-size: 2rem;
+  line-height: 38px;
+  color: $text;
+  margin-bottom: 15px;
+}
+div.aboutblock__content:nth-child(1) > div:nth-child(2) {
+  font-family: Regular;
+  font-size: 1rem;
+  line-height: 23px;
+  color: $text;
+}
+div.aboutblock__content:nth-child(1) > div:nth-child(2) > p {
+  margin-bottom: 10px;
+}
+div.aboutblock__content:nth-child(2) > div:nth-child(1) {
+  font-family: Medium;
+  font-size: 2rem;
+  line-height: 38px;
+  color: $white;
+  margin-bottom: 15px;
+}
+div.aboutblock__content:nth-child(2) > div:nth-child(2) {
+  font-family: Regular;
+  font-size: 1rem;
+  line-height: 23px;
+  color: $white;
+}
+div.aboutblock__content:nth-child(2) > div:nth-child(2) > p {
+  margin-bottom: 10px;
+}
+@media (max-width: 1040px) {
+  .about {
+    height: 100%;
+  }
+  .about .aboutblock {
+    margin-top: 0;
+  }
+  .about .aboutblock__content {
+    padding: 20px;
+  }
+  .about .aboutblock__content:nth-child(1) {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    padding: 0;
+  }
+  .about .aboutblock__content:nth-child(2) {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}

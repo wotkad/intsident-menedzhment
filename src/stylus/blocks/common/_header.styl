@@ -1,0 +1,180 @@
+.menu
+	display flex
+	justify-content space-between
+	height 80px
+	width 100%
+	z-index 99
+	background-color $white
+	position fixed
+	top 0
+	box-shadow 0 0 10px #666
+	&-l
+		display flex
+		&__logo
+			width 230px
+			display flex
+			align-items center
+			justify-content center
+			font-size 1.5rem
+			color $white
+			line-height 23px
+			font-family Light
+			background-color $red
+		&__item
+			display flex
+			align-items center
+			justify-content center
+			height 100%
+			font-family Bold
+			font-size 0.75rem
+			line-height 11px
+			letter-spacing 1px
+			text-transform uppercase
+			padding 0 30px
+			transition .3s
+			border-bottom 2px solid $white
+			&:hover
+				color $red
+				border-color $red
+	&-r
+		display flex
+		width 230px
+		&__dropdown
+			display flex
+			align-items center
+			justify-content center
+			height 100%
+			font-family Bold
+			font-size 0.75rem
+			line-height 11px
+			letter-spacing 1px
+			text-transform uppercase
+			width 100%
+			border-bottom 2px solid $red
+			cursor pointer
+			transition .3s
+			z-index 6
+			background-color $white
+			&:hover
+				background-color $red
+				color $white
+			& svg path
+				transition .3s
+			&:hover svg path
+				fill $white
+			svg
+				transition .3s
+				margin-left 11px
+		&__list
+			display flex
+			flex-wrap wrap
+			padding 20px
+			background-color $white
+			position absolute
+			transform translateY(-290px)
+			top 80px
+			transition .3s
+			z-index 5
+			&-item
+				p
+					flex-basis 100%
+					font-family Regular
+					font-size 0.75rem
+					line-height 17px
+					color $gray
+			a
+				flex-basis 100%
+				color $text
+				font-size 1.125rem
+				font-family Medium
+				line-height 17px
+				padding 25px 0
+				transition .3s
+				&:hover
+					color $red
+			&-button
+				flex-basis 100%
+				border 1px solid $red
+				color $red
+				font-family Bold
+				font-size 0.75rem
+				line-height 11px
+				padding 11px 30px
+				text-align center
+				cursor pointer
+				transition .3s
+				&:hover
+					color $white
+					background-color $red
+.opened-list
+	transform translateY(0px)
+.rotated-svg
+	transform rotate(180deg)
+	transition .3s
+.mobmenu
+	display none
+.moblist
+	display none
+@media(max-width: 1140px)
+	.moblist
+		width 100%
+		top 60px
+		height calc(100vh - 60px)
+		background-color $white
+		display flex
+		flex-direction column
+		transform translateX(-100%)
+		position fixed
+		z-index 123
+		transition .3s
+		&__item
+			color $black
+			width 100%
+			display flex
+			align-items center
+			justify-content center
+			font-family Medium
+			font-size 2rem
+			height 25%
+			transition .3s
+			&:hover
+				color $red
+	.menu
+		display none
+	.mobmenu
+		background-color $white
+		height 60px
+		position fixed
+		display flex
+		z-index 999
+		top 0
+		align-items center
+		padding 0 15px
+		justify-content space-between
+		width 100%
+		box-shadow 0 0 10px #666
+		&__item
+			cursor pointer
+			display flex
+			align-items center
+			justify-content center
+			svg
+				width 32px
+				height 32px
+				path,
+				polygon
+					transition .3s
+				&:hover path,
+				&:hover polygon
+					fill $red
+			.menuicon
+				display block
+			.closeicon
+				display none
+		p
+			font-family Light
+			font-size 2rem
+			color $text
+			line-height 34px
+.opened
+	transform translateX(0%)

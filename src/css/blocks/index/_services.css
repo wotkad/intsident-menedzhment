@@ -1,0 +1,79 @@
+.services {
+  margin-top: -80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.services__item {
+  padding: 60px 45px;
+  -webkit-flex-basis: 33.33334%;
+      -ms-flex-preferred-size: 33.33334%;
+          flex-basis: 33.33334%;
+  background-color: $white;
+  z-index: 5;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.services__item-title {
+  font-family: Medium;
+  font-size: 2rem;
+  line-height: 38px;
+  color: $text;
+  margin-bottom: 15px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.services__item-desc {
+  font-size: 1rem;
+  line-height: 23px;
+  font-family: Regular;
+  margin-bottom: 10px;
+  color: $text;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.services__item:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+.services__item:nth-child(4) {
+  background-color: #4d4d4d;
+}
+.services__item:hover {
+  background-color: $red;
+}
+.services__item:hover .services__item-desc {
+  color: $white;
+}
+.services__item:hover .services__item-title {
+  color: $white;
+}
+div.services__item:nth-child(4) > div:nth-child(1) {
+  color: $white;
+}
+div.services__item:nth-child(4) > div:nth-child(2) {
+  color: $white;
+}
+@media (max-width: 1040px) {
+  .services {
+    padding: 40px 0;
+    margin: 0;
+  }
+  .services__item {
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .services__item {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}

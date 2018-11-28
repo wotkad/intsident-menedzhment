@@ -1,0 +1,125 @@
+.popup-overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.7);
+  height: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.popup {
+  background-color: $white;
+  padding: 50px 45px;
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  height: 480px;
+  width: 380px;
+  top: -webkit-calc(50% - 240px);
+  top: calc(50% - 240px);
+  left: -webkit-calc(50% - 190px);
+  left: calc(50% - 190px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.popup__container-title {
+  font-size: 2rem;
+  font-family: Medium;
+  color: $text;
+  line-height: 38px;
+  width: 50%;
+  margin-bottom: 30px;
+}
+.popup__container-close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  top: 0;
+}
+.popup__container-close svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__container-close svg:hover path {
+  fill: $black;
+}
+.popup__container-form button {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  z-index: 3;
+  width: 100%;
+  height: 55px;
+  border: 1px solid $red;
+  color: $red;
+  background-color: $white;
+  font-family: Bold;
+  line-height: 11px;
+  font-size: 0.75rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__container-form button:hover {
+  background-color: $red;
+  color: $white;
+}
+.popup__container-form-input input {
+  width: 100%;
+  border: 1px solid #ececec;
+  padding: 15px 19px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: Regular;
+  font-size: 1rem;
+  line-height: 23px;
+  color: $text;
+  margin-bottom: 20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__container-form-input input:hover,
+.popup__container-form-input input:focus {
+  border: 1px solid $red;
+}
+.popup__container-form-policy {
+  margin-top: 15px;
+  text-align: center;
+}
+.popup__container-form-policy p {
+  color: $text;
+  opacity: 0.6;
+  font-family: Regular;
+  font-size: 0.75rem;
+  line-height: 17px;
+  display: inline;
+  margin-right: 3px;
+}
+.popup__container-form-policy a {
+  opacity: 1;
+  color: $red;
+  font-family: Regular;
+  font-size: 0.75rem;
+  line-height: 17px;
+  display: inline-block;
+  border-bottom: 1px solid $red;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__container-form-policy a:hover {
+  border-color: $black;
+}

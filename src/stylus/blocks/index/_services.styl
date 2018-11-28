@@ -1,0 +1,49 @@
+.services
+	margin-top -80px
+	display flex
+	width 100%
+	flex-wrap wrap
+	&__item
+		padding 60px 45px
+		flex-basis 33.33334%
+		background-color $white
+		z-index 5
+		transition background-color .3s
+		&-title
+			font-family Medium
+			font-size 2rem
+			line-height 38px
+			color $text
+			margin-bottom 15px
+			transition color .3s
+		&-desc
+			font-size 1rem
+			line-height 23px
+			font-family Regular
+			margin-bottom 10px
+			color $text
+			transition color .3s
+		&:nth-child(2n)
+			background-color #F1F1F1
+		&:nth-child(4)
+			background-color #4D4D4D
+		&:hover
+			background-color $red
+		&:hover &-desc
+			color $white
+		&:hover &-title
+			color $white
+div.services__item:nth-child(4) > div:nth-child(1)
+	color $white
+div.services__item:nth-child(4) > div:nth-child(2)
+	color $white
+@media(max-width: 1040px)
+	.services
+		padding 40px 0
+		margin 0
+		&__item
+			padding 20px
+@media(max-width: 767px)
+	.services
+		&__item
+			flex-basis 100%

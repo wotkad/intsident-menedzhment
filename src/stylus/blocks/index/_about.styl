@@ -1,0 +1,56 @@
+.about
+	height 320px
+	width 100%
+	.aboutblock
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		margin-top -80px
+		position relative
+		z-index 3
+		&__content
+			padding 50px 45px
+			&:nth-child(1)
+				flex-basis 66.66667%
+				background-color $white
+			&:nth-child(2)
+				flex-basis 33.33334%
+				background-color #4D4D4D
+div.aboutblock__content:nth-child(1) > div:nth-child(1)
+	font-family Medium
+	font-size 2rem
+	line-height 38px
+	color $text
+	margin-bottom 15px
+div.aboutblock__content:nth-child(1) > div:nth-child(2)
+	font-family Regular
+	font-size 1rem
+	line-height 23px
+	color $text
+div.aboutblock__content:nth-child(1) > div:nth-child(2) > p
+	margin-bottom 10px
+div.aboutblock__content:nth-child(2) > div:nth-child(1)
+	font-family Medium
+	font-size 2rem
+	line-height 38px
+	color $white
+	margin-bottom 15px
+div.aboutblock__content:nth-child(2) > div:nth-child(2)
+	font-family Regular
+	font-size 1rem
+	line-height 23px
+	color $white
+div.aboutblock__content:nth-child(2) > div:nth-child(2) > p
+	margin-bottom 10px
+@media(max-width: 1040px)
+	.about
+		height 100%
+		.aboutblock
+			margin-top 0
+			&__content
+				padding 20px
+				&:nth-child(1)
+					flex-basis 100%
+					padding 0
+				&:nth-child(2)
+					flex-basis 100%

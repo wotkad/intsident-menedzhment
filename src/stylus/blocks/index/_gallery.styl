@@ -1,0 +1,140 @@
+.gallery
+	height 415px
+	width 100%
+	.galleryblock
+		display flex
+		justify-content space-between
+		padding 40px 25px
+		background-color $white
+		margin-top -80px
+		z-index 3
+		position relative
+		&__items
+			flex-basis 30%
+			display flex
+			flex-wrap wrap
+			&-item
+				flex-basis calc(33.33334% - 6px)
+				justify-content center
+				align-items center
+				display flex
+				transition .3s
+				cursor pointer
+				margin 3px
+				font-size 0
+				&:hover
+					box-shadow 0px 0px 15px rgba(0, 0, 0, 0.1)
+					border-radius 3px
+				&:hover img
+					filter grayscale(0%)
+					opacity 1
+				img
+					width 70%
+					filter grayscale(100%)
+					transition .3s
+					opacity .6
+					user-select none
+					pointer-events none
+		&__info
+			flex-basis 70%
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			padding-left 2.5%
+			margin-left 2.5%
+			border-left 1px solid #ECECEC
+			&-title
+				font-size 2rem
+				line-height 38px
+				color $text
+				font-family Medium
+				flex-basis 45%
+				margin-bottom 10px
+				display flex
+				align-items center
+			&-image
+				flex-basis 45%
+				display flex
+				align-items center
+				justify-content center
+				max-width 45%
+				margin-bottom: 10px;
+				height 114px
+			&-link
+				color $red
+				font-family Regular
+				font-size 1.125rem
+				line-height 17px
+				letter-spacing 2.5px
+				margin-bottom 45px
+				transition .3s
+				flex-basis 100%
+				&:hover
+					color $black
+			&-text
+				flex-basis 100%
+				letter-spacing 1px
+				font-family Regular
+				font-size 1rem
+				line-height 23px
+				color $text
+				margin-bottom 40px
+			&-prop
+				flex-basis 100%
+				font-family Bold
+				font-size 1rem
+				line-height 23px
+				margin-bottom 10px
+				color $text
+				span
+					font-family Regular
+					margin-left 5px
+@media(max-width: 1040px)
+	.gallery
+		height 100%
+		padding 40px 0
+		.galleryblock
+			margin 0
+			padding 0
+@media(max-width: 767px)
+	.gallery
+		.galleryblock
+			flex-wrap wrap
+			&__items
+				margin-bottom 20px
+				flex-basis 100%
+				&-item
+					flex-basis calc(20% - 6px)
+					padding 10px
+			&__info
+				margin 0
+				padding 0
+				border none
+				flex-basis 100%
+				&-title
+					flex-basis 100%
+					display flex
+					align-items center
+				&-image
+					display flex
+					align-items center
+				&-link
+					flex-basis 100%
+					width 100%
+					margin-top 10px
+					margin-bottom 15px
+				&-text
+					margin-bottom 15px
+@media(max-width: 600px)
+	.gallery
+		.galleryblock
+			padding 0
+			&__items
+				&-item
+					flex-basis calc(25% - 6px)
+@media(max-width: 400px)
+	.gallery
+		.galleryblock
+			&__items
+				&-item
+					flex-basis calc(33% - 6px)

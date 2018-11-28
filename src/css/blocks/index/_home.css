@@ -1,0 +1,204 @@
+#home {
+  margin-top: 80px;
+}
+.home-overlay {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: -webkit-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+}
+.home {
+  background: url("/images/home-bg.jpg") 50% 50% no-repeat;
+  width: 100%;
+  height: -webkit-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+}
+.home__leftblock {
+  background-color: rgba(0,0,0,0.6);
+  height: -webkit-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+  width: 230px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.home__rightblock {
+  height: -webkit-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+  width: 230px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.home__rightblock-text {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+}
+.home__rightblock-text-content {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: $white;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  line-height: 11px;
+  font-family: Light;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: relative;
+}
+.home__rightblock-text-content:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background-color: rgba(255,255,255,0.6);
+  left: 50px;
+  top: 50%;
+}
+.home__rightblock-text-content:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background-color: rgba(255,255,255,0.6);
+  right: 50px;
+  top: 50%;
+}
+.home__centerblock {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 4;
+  position: relative;
+  height: -webkit-calc(100vh - 80px);
+  height: calc(100vh - 80px);
+}
+.home__centerblock-title {
+  margin-bottom: 20px;
+}
+.home__centerblock-title h1 {
+  color: $white;
+  line-height: 59px;
+  font-size: 3.875rem;
+  font-family: Regular;
+}
+.home__centerblock-title h1 span {
+  margin-left: 15px;
+  font-family: Medium;
+}
+.home__centerblock-desc {
+  font-size: 2rem;
+  color: $white;
+  font-family: Regular;
+  line-height: 31px;
+  margin-bottom: 40px;
+}
+.home__centerblock-li {
+  margin-bottom: 25px;
+  font-size: 1.125rem;
+  line-height: 17px;
+  font-family: Medium;
+  color: $white;
+}
+.home__centerblock-li svg {
+  margin-right: 12px;
+}
+.home__centerblock-button {
+  margin-top: 25px;
+  position: relative;
+  cursor: pointer;
+  width: 300px;
+  height: 55px;
+}
+.home__centerblock-button:before {
+  content: 'Узнать подробнее';
+  position: absolute;
+  background-color: $red;
+  width: 300px;
+  height: 55px;
+  color: $white;
+  font-family: Bold;
+  line-height: 11px;
+  font-size: 0.75rem;
+  top: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.home__centerblock-button:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background-color: #890018;
+  top: 8px;
+  width: 300px;
+  height: 55px;
+  z-index: 1;
+}
+.home__centerblock-button:hover.home__centerblock-button:before {
+  top: 4px;
+}
+@media (max-width: 1140px) {
+  #home {
+    margin-top: 60px;
+  }
+  .home-overlay {
+    height: -webkit-calc(100vh - 60px);
+    height: calc(100vh - 60px);
+  }
+  .home {
+    height: -webkit-calc(100vh - 60px);
+    height: calc(100vh - 60px);
+  }
+  .home__leftblock {
+    display: none;
+  }
+  .home__rightblock {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .home__centerblock-button {
+    width: 100%;
+  }
+  .home__centerblock-button:before {
+    width: 100%;
+  }
+  .home__centerblock-button:after {
+    width: 100%;
+  }
+  .home__centerblock-li {
+    line-height: 24px;
+  }
+  .home__centerblock-li svg {
+    margin-bottom: -4px;
+  }
+}
