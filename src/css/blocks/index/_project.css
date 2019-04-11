@@ -1,0 +1,80 @@
+#project {
+  margin-top: -80px;
+}
+.project {
+  width: 100%;
+}
+.project .projectblock {
+  background-color: $white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 45px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+}
+.project .projectblock__title {
+  font-family: Medium;
+  font-size: 2rem;
+  line-height: 38px;
+  color: $text;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  margin-bottom: 28px;
+}
+.project .projectblock__list {
+  -webkit-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.project .projectblock__list-item {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  font-family: Medium;
+  font-size: 1rem;
+  line-height: 23px;
+  color: $text;
+}
+.project .projectblock__list-item i {
+  color: $red;
+}
+.project .projectblock__list-item span {
+  margin-left: 20px;
+}
+.project .projectblock__text {
+  -webkit-flex-basis: 70%;
+      -ms-flex-preferred-size: 70%;
+          flex-basis: 70%;
+  font-family: Regular;
+  font-size: 1rem;
+  line-height: 23px;
+  color: $text;
+}
+.project .projectblock__text p {
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .project .projectblock__list {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  .project .projectblock__text {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}

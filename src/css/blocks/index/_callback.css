@@ -131,6 +131,7 @@
   .callbackblock {
     margin: 0;
     padding-bottom: 40px;
+    height: 320px;
   }
   .callbackblock__content {
     -webkit-flex-wrap: wrap;
@@ -154,5 +155,10 @@
   }
   .callbackblock__content-button:after {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .callbackblock {
+    height: 430px;
   }
 }

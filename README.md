@@ -1,4 +1,4 @@
-# Skolkovo-landing
+# Intsident-menedzhment
 
 INSTALLATION
 -
